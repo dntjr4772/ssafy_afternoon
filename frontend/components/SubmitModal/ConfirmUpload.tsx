@@ -300,10 +300,16 @@ const ConfirmUpload = ({
   };
 
   useEffect(function mount() {
-    window.addEventListener("resize", onClickAddPin);
+    const resizeHandler = () => {
+      let pinImage = document.getElementById("pinImage");
+      let { offsetWidth, offsetHeight } = pinImage;
+      setImgDim({ offsetWidth, offsetHeight });
+    };
+
+    window.addEventListener("resize", resizeHandler);
 
     const cleanup = () => {
-      window.removeEventListener("resize", onClickAddPin);
+      window.removeEventListener("resize", resizeHandler);
     };
 
     return cleanup;
