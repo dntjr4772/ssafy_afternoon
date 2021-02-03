@@ -11,7 +11,7 @@ const ImgBox = styled.div`
   height: 200px;
 `;
 
-const TopLeft = () => {
+const TopLeft = ({ profileImg }) => {
   return (
     <>
       <ImgBox>

@@ -41,15 +41,33 @@ const Wrapper2 = styled.div`
   margin-left: 10px;
 `;
 
-const index = () => {
+const index = ({ profileData }) => {
+  const {
+    profileImg,
+    profileName,
+    profileText,
+    profileFollowing,
+    profileFollwer,
+    profileMyposts,
+    profileTags,
+  } = profileData;
   return (
     <>
       <Container>
         <Wrapper1>
-          <TopLeft></TopLeft>
+          <TopLeft
+          profileImg={profileImg}
+          ></TopLeft>
         </Wrapper1>
         <Wrapper2>
-          <TopRight></TopRight>
+          <TopRight
+          profileName={profileName}
+          profileText={profileText}
+          profileFollowing={profileFollowing}
+          profileFollower={profileFollwer}
+          profileMyposts={profileMyposts}
+          profileTags={profileTags}
+          ></TopRight>
         </Wrapper2>
       </Container>
       <Container2>

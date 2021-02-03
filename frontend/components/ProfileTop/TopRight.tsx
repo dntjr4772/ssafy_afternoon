@@ -22,10 +22,6 @@ const EditBox = styled.div`
   position: absolute;
 `;
 
-// const EditButton = styled.div`
-
-// `;
-
 const TextBox = styled.div`
   width: 700px;
   height: 50px;
@@ -82,11 +78,18 @@ const TagList = styled.div`
   margin: 3px 0px;
 `;
 
-const TopRight = () => {
+const TopRight = ({
+  profileName,
+  profileText,
+  profileFollowing,
+  profileFollower,
+  profileMyposts,
+  profileTags,
+}) => {
   return (
     <>
       <TitleBox>
-        <ProfileTitle>Hally Berry</ProfileTitle>
+        <ProfileTitle>{ profileName }</ProfileTitle>
         <EditBox>
           {/* <Image
             src="/assets/icons/edit_white.png"
@@ -97,19 +100,18 @@ const TopRight = () => {
       </TitleBox>
       <TextBox>
         <ProfileText>
-          우리의 이것이야말로 얼음에 위하여서. 사람은 동산에는 같이, 것이다.
-          희망의 가슴이 뜨거운지라, 얼마나 끓는 있으랴? 청춘 지혜는 스며들어
-          싶이 작고 사막이다. 가치를 낙원을 방황하여도,
+          { profileText }
         </ProfileText>
       </TextBox>
       <FollowBox>
-        <ProfileFollowing>팔로잉 0명</ProfileFollowing>
-        <ProfileFollower>팔로워 1000명</ProfileFollower>
-        <ProfilePost>나의 게시글 50개</ProfilePost>
+        <ProfileFollowing>팔로잉 : { profileFollowing }명</ProfileFollowing>
+        <ProfileFollower>팔로워 : { profileFollower }명</ProfileFollower>
+        <ProfilePost>나의 게시글 : { profileMyposts }개</ProfilePost>
       </FollowBox>
       <TagTitle>
         <TagTitle>나의 관심태그</TagTitle>
         <TagList>
+          { profileTags }
           <Button
             btnText="클라이밍"
             btnWidth="100px"
@@ -119,7 +121,6 @@ const TopRight = () => {
             btnFontSize="20px"
             btnFontWeight={500}
             btnHoverTextColor="${color.gray.dark}"
-     
           />
           <Button
             btnText="엔지니어"
@@ -130,7 +131,6 @@ const TopRight = () => {
             btnFontSize="20px"
             btnFontWeight={500}
             btnHoverTextColor="${color.gray.dark}"
-        
           />
         </TagList>
       </TagTitle>
