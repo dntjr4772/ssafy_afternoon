@@ -82,7 +82,7 @@ const TopRight = ({
   postsCnt,
   tagList,
   toggleEdit,
-  setFollowState,
+  setUserListState,
   toggleFollow,
 }) => {
   return (
@@ -113,7 +113,7 @@ const TopRight = ({
       <FollowBox>
         <UserFollowing
           onClick={() => {
-            setFollowState(1);
+            setUserListState(1);
             toggleFollow();
           }}
         >
@@ -121,7 +121,7 @@ const TopRight = ({
         </UserFollowing>
         <UserFollower
           onClick={() => {
-            setFollowState(2);
+            setUserListState(2);
             toggleFollow();
           }}
         >

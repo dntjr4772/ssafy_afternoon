@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import color from "../../styles/theme";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Container = styled.div`
   width: 300px;
@@ -51,6 +52,7 @@ const FollowingBox2 = styled.div`
   margin: 10px 0px;
   width: 220px;
   justify-content: space-between;
+  cursor: pointer;
 `;
 
 const FollowingNickname = styled.div`
@@ -64,13 +66,15 @@ const FollowingPosts = styled.div`
   color: ${color.gray.dark};
 `;
 
-const index = ({ toggleFollow, followState, userList }) => {
+const index = ({ toggleFollow, userListState, userList }) => {
+  const router = useRouter();
+
   return (
     <Container>
       <Wrapper1>
         <FollowingTitle>
-          {followState === 1 && "팔로잉"}
-          {followState === 2 && "팔로워"}
+          {userListState === 1 && "팔로잉"}
+          {userListState === 2 && "팔로워"}
         </FollowingTitle>
         <Xbutton onClick={toggleFollow}>
           <Image
@@ -83,7 +87,13 @@ const index = ({ toggleFollow, followState, userList }) => {
       <Wrapper2>
         {userList &&
           userList.map((ul, index) => (
-            <FollowingBox2>
+            <FollowingBox2
+              key={index}
+              onClick={() => {
+                router.push(`/search/${ul.nickname}`);
+                toggleFollow();
+              }}
+            >
               <FollowingNickname>{ul.nickname}</FollowingNickname>
               <FollowingPosts>0</FollowingPosts>
             </FollowingBox2>

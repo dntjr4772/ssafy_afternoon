@@ -59,7 +59,7 @@ const useStore = () => {
 const index = ({ profileData, setTabState, tabState }) => {
   const { toggleEdit, toggleFollow, editShown, followShown } = useStore();
 
-  const [followState, setFollowState] = useState(0);
+  const [userListState, setUserListState] = useState(0);
 
   const {
     accountPhoto,
@@ -86,11 +86,11 @@ const index = ({ profileData, setTabState, tabState }) => {
           accountBio={accountBio}
         ></ProfileEdit>
       )}
-      {followShown && followState !== 0 && (
+      {followShown && userListState !== 0 && (
         <FollowList
           toggleFollow={toggleFollow}
-          followState={followState}
-          userList={followState === 1 ? following : follower}
+          userListState={userListState}
+          userList={userListState === 1 ? following : follower}
         ></FollowList>
       )}
       <Container1>
@@ -105,7 +105,7 @@ const index = ({ profileData, setTabState, tabState }) => {
             tagList={tags}
             toggleEdit={toggleEdit}
             toggleFollow={toggleFollow}
-            setFollowState={setFollowState}
+            setUserListState={setUserListState}
           ></TopRight>
         </Wrapper2>
       </Container1>
