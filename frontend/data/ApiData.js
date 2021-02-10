@@ -70,7 +70,7 @@ export const SubmitPostData = {
   },
 };
 
-export const GetProfileData = {
+export const GetMyInfoData = {
   httpStatus: "OK",
   headers: null,
   data: {
@@ -97,6 +97,7 @@ export const GetProfileData = {
     ],
     writtenPostsCnt: 1,
     likePosts: [],
+    likePostsCnt: 0,
     tags: [{ tagId: 2 }, { tagId: 4 }, { tagId: 9 }, { tagId: 7 }],
   },
 };
