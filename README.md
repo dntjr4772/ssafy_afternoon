@@ -1,6 +1,4 @@
-## Welcome to 애프터눈 🙋‍♂️🙆‍♀️
-
----
+# Welcome to 애프터눈 🙆🙋🙆
 
 ![애프터눈로고](docs/afternoon_logo.png)
 ![애프터눈텍스트](docs/afternoon_text.png)
@@ -24,9 +22,7 @@
 
 ## Project Overview 📆
 
----
-
-- **진행 기간** : 2021.01.11 ~ 2021.01.15 (7주)
+- **진행 기간** : 2021. 01. 11 ~ 2021. 02. 19 (6주)
 
 - **선택 트랙** : 웹 디자인 - 웹 큐레이션 SNS
 
@@ -60,12 +56,10 @@
 
 ## Tech Stack 🔧
 
----
-
 <div align="center">
 
 ![Next.js](https://img.shields.io/badge/Next.js-_-000000?logo=Next.js)
-[![React](https://img.shields.io/badge/React-_-61DAFB?logo=React)](https://reactjs.org/)
+![React](https://img.shields.io/badge/React-_-61DAFB?logo=React)
 ![Redux](https://img.shields.io/badge/Redux-_-764ABC?logo=Redux)
 ![Typescript](https://img.shields.io/badge/Typescript-_-764ABC?logo=Typescript)
 ![Javascript](https://img.shields.io/badge/Javascript-_-F7DF1E?logo=Javascript)
@@ -88,18 +82,12 @@
 
 ## System Architecture 🖥️
 
----
-
 ![애프터눈로고](docs/시스템아키텍처.png)
 
 ## Main Feature ⭐
 
----
-
 <br>
 
 ## Who We Are? 👨‍👧‍👦
-
----
 
 <br>
